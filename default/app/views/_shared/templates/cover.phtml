@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta http-equiv='Content-type' content='text/html; charset=<?php echo APP_CHARSET ?>' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KumbiaPHP web &amp; App Framework</title>  
+  <?php Tag::css('bootstrap/bootstrap') ?>
+  <?php Tag::css('bootstrap/bootstrap-theme') ?>
+  <?php Tag::css('Font-awesome/css/font-awesome') ?>
+  <?php Tag::css('cover') ?>
+  <?php echo Html::includeCss() ?>
+  <style type="text/css">
+        /*Escritorio*/
+        @media (min-width: 1200px){
+                /*body {color: red;}*/
+        }
+        /*Escritorio pequeño o tablet*/
+        @media (min-width: 768px) and (max-width: 979px){
+                body {color: green;}
+        }
+        /*Tablet o smartphone*/
+        @media (max-width: 767px){
+                body {color: blue;}
+        }
+        /*Smartphone*/
+        @media (max-width: 480px){
+                body {color: orange;}
+        }
+        .text-big {
+                font-size: 300px;
+                line-height: 320px;
+        }
+</style>
+</head>
+<body>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="inner cover">
+            <p class="lead"><?php View::content(); ?></p>
+          </div>
+           
+<!--          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>-->
+
+        </div>
+
+      </div>
+
+    </div>
+</body>
+<?php echo Tag::js('jquery/jquery.min') ?>
+<?php echo Tag::js('bootstrap_js/bootstrap.min') ?>
+</html>
