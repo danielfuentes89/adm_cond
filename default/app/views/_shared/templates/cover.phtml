@@ -3,7 +3,7 @@
  <head>
   <meta http-equiv='Content-type' content='text/html; charset=<?php echo APP_CHARSET ?>' />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KumbiaPHP web &amp; App Framework</title>  
+  <title>DISO</title>  
   <?php Tag::css('bootstrap/bootstrap') ?>
   <?php Tag::css('bootstrap/bootstrap-theme') ?>
   <?php Tag::css('Font-awesome/css/font-awesome') ?>
@@ -12,23 +12,19 @@
   <style type="text/css">
         /*Escritorio*/
         @media (min-width: 1200px){
-                /*body {color: red;}*/
+                .text-big {font-size: 45px;line-height: 200px;}
         }
         /*Escritorio pequeño o tablet*/
-        @media (min-width: 768px) and (max-width: 979px){
-                body {color: green;}
+        @media (min-width: 768px) and (max-width: 1199px){
+                .text-big {font-size: 35px;line-height: 200px;}
         }
         /*Tablet o smartphone*/
-        @media (max-width: 767px){
-                body {color: blue;}
+        @media (min-width: 481px) and (max-width: 767px){
+                .text-big {font-size: 25px;line-height: 200px;}
         }
         /*Smartphone*/
         @media (max-width: 480px){
-                body {color: orange;}
-        }
-        .text-big {
-                font-size: 300px;
-                line-height: 320px;
+                .text-big {font-size: 15px;line-height: 200px;}
         }
 </style>
 </head>
@@ -55,6 +51,6 @@
 
     </div>
 </body>
-<?php echo Tag::js('jquery/jquery.min') ?>
+<?php echo Tag::js('jquery/1.11.2/jquery.min') ?>
 <?php echo Tag::js('bootstrap_js/bootstrap.min') ?>
 </html>
