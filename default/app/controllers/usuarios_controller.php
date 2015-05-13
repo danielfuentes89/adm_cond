@@ -5,10 +5,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-class PrincipalController extends AppController
+class UsuariosController extends AppController
 {
 
-    public function index()
+    public function micuenta()
     {
         
     }

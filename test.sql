@@ -50,20 +50,24 @@ INSERT INTO `menus` (`id`, `nombre`, `titulo`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `login` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `edad` int(11) NOT NULL,
-  `telefono` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
+  `usro_id` int(11) NOT NULL AUTO_INCREMENT,
+  `usro_login` varchar(50) NOT NULL,
+  `usro_pass` varchar(50) NOT NULL,
+  `usro_nombre` varchar(20) NOT NULL,
+  `usro_apellido` varchar(20) NOT NULL,
+  `usro_correo` varchar(50) NOT NULL,  
+  `usro_nac` date NOT NULL,
+  `tpo_usro` int(11) NOT NULL,
+  `usro_fono` varchar(20) NOT NULL,
+  PRIMARY KEY (`usro_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `login`, `password`, `edad`, `telefono`) VALUES
-(1, 'danielfuentes89@gmail.com', '1234', 25, '2923550');
+INSERT INTO `usuarios` (`usro_login`, `usro_pass`, `usro_nombre`, `usro_apellido`,`usro_correo`, `usro_nac`, `tpo_usro`, `usro_fono`) VALUES
+('Dfuentes','1234','Daniel','Fuentes','danielfuentes89@gmail.com', '1989-11-03', 1, '2923550');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
