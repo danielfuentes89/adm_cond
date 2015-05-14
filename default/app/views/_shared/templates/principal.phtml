@@ -35,16 +35,16 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Usuarios <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
-                <?php echo Html::link('usuarios/micuenta',"Mi Cuenta"."<span class='sr-only'>(current)</span>"); ?>
+                <?php echo Html::link('usuarios/micuenta/'.Session::get("id"),"Mi Cuenta"."<span class='sr-only'>(current)</span>"); ?>
                 </li>
                 <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><?php echo Html::link('usuarios/lista_usuarios',"Modificar Usuarios"); ?></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-                <?php echo Html::link('index',"Salir"."<span class='sr-only'>(current)</span>"); ?>
+                <?php echo Html::link('index',"Salir"); ?>
             </li>
           </ul>
         </div><!--/.nav-collapse -->

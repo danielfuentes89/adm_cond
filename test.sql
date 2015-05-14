@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `tpo_usro` int(11) NOT NULL,
   `usro_fono` varchar(20) NOT NULL,
   PRIMARY KEY (`usro_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Volcado de datos para la tabla `usuarios`
