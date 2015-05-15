@@ -12,19 +12,17 @@ class UsuariosController extends AppController
     /**
      * Edita un Registro
      *
-     * @param int $id (requerido)
+     * @param int $usro_id (requerido)
      */
     public function micuenta($usro_id)
     {        
-        $usuarios = new usuarios();
- 
+        $usuarios = new usuarios(); 
         //se verifica si se ha enviado el formulario (submit)
-        if(Input::hasPost('usuarios')){
-            
+        if(Input::hasPost('usuarios')){            
             if($usuarios->update(Input::post('usuarios'))){
                  Flash::valid('Operación exitosa');
                 //enrutando por defecto al index del controller
-                return Redirect::to("usuarios/micuenta/".Session::get("id"));
+                return Redirect::to("usuarios/micuenta/".$usro_id);
             } else {
                 Flash::error('Falló Operación');
             }
@@ -34,12 +32,9 @@ class UsuariosController extends AppController
         }
     }
     
-    public function mod_usuario()
-    {  
-        
+    public function mod_usuario(){         
     }
     
     public function lista_usuarios(){
-        
     }
 }

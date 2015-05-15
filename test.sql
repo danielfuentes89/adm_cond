@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`usro_login`, `usro_pass`, `usro_nombre`, `usro_apellido`,`usro_correo`, `usro_nac`, `tpo_usro`, `usro_fono`) VALUES
-('Dfuentes','1234','Daniel','Fuentes','danielfuentes89@gmail.com', '1989-11-03', 1, '2923550');
+('Aperez','1234','Andres','Perez','AndresPerez@correo.com', '1989-11-03', 2, '+56228945235');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
