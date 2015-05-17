@@ -1,0 +1,30 @@
+<?php View::content(); ?>
+<script language="javascript">
+function trae_cuenta(id){
+    window.location.href= "<?php echo PUBLIC_PATH . 'usuarios/micuenta/'; ?>"+id;
+//    $.ajax({ 
+//            type: "POST", 
+//            url: "<?php// echo PUBLIC_PATH . 'usuarios/micuenta/'; ?>"+id, 
+//            //data: "nombre=" + nombre, 
+//            success: function(html){ 
+//            $("#resultado-ajax").html(html); 
+//            } 
+//       }); 
+}
+</script>
+<div class="row">
+    
+    <div class="col-md-4">&nbsp;</div>
+    <div class="col-md-4"><h3>Listado de Usuarios<h3></div>
+    <div class="col-md-4">&nbsp;</div>  
+    <div class="col-md-12">&nbsp;</div>
+    <div class="col-md-4">&nbsp;</div>
+    <div class="col-md-4">
+        <?php// echo Form::open(); ?>
+        <?php echo Form::dbSelect('usuarios_id',$show = 'usro_login', $data = NULL, $blank = "Seleccione..", $attrs = "onchange='trae_cuenta(this.value);'"); ?>
+        <?php// echo Form::close(); ?>
+    </div>
+    <div class="col-md-4">&nbsp;</div> 
+    <div  id="resultado-ajax"> 
+    </div>
+</div>
