@@ -13,8 +13,4 @@ class PrincipalController extends AppController
         
     }
     
-    public function logout()
-    {
-        
-    }
 }

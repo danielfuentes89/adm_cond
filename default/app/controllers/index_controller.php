@@ -2,14 +2,15 @@
 /**
  * Controller para la pagina de inicio "index"
  */
-    Load::lib('auth');
-    //Load::lib('session');
-    Load::model('usuarios');  
-        
 class IndexController extends AppController
 {
     public function index()    {        
         View::template('cover');
+        Load::lib('auth');
+        Load::lib('session');
+        Load::model('usuarios');
+        Session::delete("login");
+        Auth::destroy_identity();
         if (Input::hasPost("inputEmail3","inputPassword3")){
             $pwd = Input::post("inputPassword3");
             $usuario=Input::post("inputEmail3"); 
