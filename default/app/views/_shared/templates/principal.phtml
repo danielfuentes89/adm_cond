@@ -7,14 +7,19 @@
 <html lang="es">
  <head>
   <meta http-equiv='Content-type' content='text/html; charset=<?php echo APP_CHARSET ?>' />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Diso</title>
   <?php Tag::css('bootstrap/bootstrap') ?>
   <style type="text/css">
       body {
         min-height: 2000px;
         padding-top: 70px;
-      }      
-    </style>    
+      }
+      .navbar-static-top {
+        margin-bottom: 19px;
+      }
+    </style>
   <?php Tag::css('bootstrap/bootstrap-theme') ?>
   <?php Tag::css('Font-awesome/css/font-awesome') ?>
   <?php echo Html::includeCss() ?>
@@ -24,6 +29,12 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <?php echo Html::link("principal","DISO", "class='navbar-brand'") ?>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -43,9 +54,7 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li>
-                <?php echo Html::link('principal/logout',"Salir"); ?>
-            </li>
+            <li><?php echo Html::link('principal/logout',"Salir"); ?></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
