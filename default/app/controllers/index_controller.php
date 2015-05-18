@@ -24,7 +24,7 @@ class IndexController extends AppController
                 Session::set('correo', $us->usro_correo);
                 Session::set('nac', $us->usro_nac);
                 Session::set('tpo', $us->usro_tpo);
-                Flash::success("Bienvenido ".Session::get('nombre')." ".Session::get('apellido'));
+                //Flash::success("Bienvenido ".Session::get('nombre')." ".Session::get('apellido'));                
                 Router::redirect("principal/index");
             } else {
                 Flash::error("Usuario o contraseña invalidos");

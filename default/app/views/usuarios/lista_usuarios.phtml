@@ -1,30 +1,33 @@
 <?php View::content(); ?>
-<script language="javascript">
-function trae_cuenta(id){
-    window.location.href= "<?php echo PUBLIC_PATH . 'usuarios/micuenta/'; ?>"+id;
-//    $.ajax({ 
-//            type: "POST", 
-//            url: "<?php// echo PUBLIC_PATH . 'usuarios/micuenta/'; ?>"+id, 
-//            //data: "nombre=" + nombre, 
-//            success: function(html){ 
-//            $("#resultado-ajax").html(html); 
-//            } 
-//       }); 
-}
-</script>
 <div class="row">
-    
     <div class="col-md-4">&nbsp;</div>
-    <div class="col-md-4"><h3>Listado de Usuarios<h3></div>
+    <div class="col-md-4"><h3>Editar Cuenta<h3></div>
     <div class="col-md-4">&nbsp;</div>  
-    <div class="col-md-12">&nbsp;</div>
-    <div class="col-md-4">&nbsp;</div>
-    <div class="col-md-4">
-        <?php// echo Form::open(); ?>
-        <?php echo Form::dbSelect('usuarios_id',$show = 'usro_login', $data = NULL, $blank = "Seleccione..", $attrs = "onchange='trae_cuenta(this.value);'"); ?>
-        <?php// echo Form::close(); ?>
-    </div>
-    <div class="col-md-4">&nbsp;</div> 
-    <div  id="resultado-ajax"> 
-    </div>
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <tr>
+             <th>Id</th>
+             <th>Login</th>
+             <th>Nombre</th>
+             <th>Apellido</th>
+             <th>Correo</th>
+             <th>Fecha Nacimiento</th>
+             <th>Fono</th>
+            </tr>
+            <?php foreach($page->items as $p): ?>
+            <tr>
+             <td><?php echo Html::link('usuarios/mod_usuario/'.$p->usro_id,$p->usro_id); ?></td>
+             <td><?php echo $p->usro_login; ?></td>
+             <td><?php echo $p->usro_nombre; ?></td>
+             <td><?php echo $p->usro_apellido; ?></td>
+             <td><?php echo $p->usro_correo; ?></td>
+             <td><?php echo $p->usro_nac; ?></td>
+             <td><?php echo $p->usro_fono; ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+
+            <?php View::partial('paginators/classic', false, array('page' => $page, 'show' => 5, 'url' => 'usuarios/lista_usuarios')); ?>
+    </div>    
 </div>
+        <?php// echo Form::dbSelect('usuarios_id',$show = 'usro_login', $data = NULL, $blank = "Seleccione..", $attrs = "onchange='trae_cuenta(this.value);'"); ?>

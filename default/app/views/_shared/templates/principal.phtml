@@ -6,11 +6,12 @@
 <!DOCTYPE html>
 <html lang="es">
  <head>
+  <?php Html::headlink(PUBLIC_PATH . 'default/public/img/favicon.png',"rel='shortcut icon',type='image/x-icon'"); ?>
+  <?php echo Html::includeHeadLinks(); ?>
   <meta http-equiv='Content-type' content='text/html; charset=<?php echo APP_CHARSET ?>' />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Diso</title>
-  <?php Tag::css('bootstrap/bootstrap') ?>
   <style type="text/css">
       body {
         min-height: 2000px;
@@ -20,6 +21,7 @@
         margin-bottom: 19px;
       }
     </style>
+  <?php Tag::css('bootstrap/bootstrap.min') ?>  
   <?php Tag::css('bootstrap/bootstrap-theme') ?>
   <?php Tag::css('Font-awesome/css/font-awesome') ?>
   <?php echo Html::includeCss() ?>
@@ -29,7 +31,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -39,15 +41,13 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Usuarios <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li>
-                <?php echo Html::link('usuarios/micuenta/'.Session::get("id"),"Mi Cuenta"."<span class='sr-only'>(current)</span>"); ?>
-                </li>
+                <li><?php echo Html::link('usuarios/micuenta/'.Session::get("id"),"Mi Cuenta"."<span class='sr-only'>(current)</span>"); ?></li>
                 <li class="divider"></li>
                 <li><?php echo Html::link('usuarios/lista_usuarios',"Modificar Usuarios"); ?></li>
               </ul>
@@ -68,9 +68,10 @@
 
     </div> <!-- /container -->
 </body>
+<?php echo Tag::js('jquery/jquery.min') ?>
 <?php echo Tag::js('jquery/1.11.2/jquery.min') ?>
 <?php echo Tag::js('bootstrap_js/bootstrap.min') ?>
-<?php echo Tag::js('funciones') ?>
+<?php// echo Tag::js('funciones') ?>
 <script language="javascript">
     $(document).ready(function () {
     $('.nav li a').click(function(e) {

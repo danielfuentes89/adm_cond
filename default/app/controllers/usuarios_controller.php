@@ -32,9 +32,13 @@ class UsuariosController extends AppController
         }
     }
     
-    public function mod_usuario(){         
+    public function lista_usuarios($page=1){
+        $Usuarios = new Usuarios();
+        $this->page = $Usuarios->ver($page);
+
     }
     
-    public function lista_usuarios(){
+    public function mod_usuario($usro_id){
+        Flash::valid($usro_id);
     }
 }
