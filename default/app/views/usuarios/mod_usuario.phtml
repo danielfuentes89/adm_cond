@@ -1,4 +1,21 @@
-<?php View::content(); ?>
+<?php View::content(); 
+$tipo1 = false;
+$tipo2 = false;
+$tipo3 = false;
+
+switch ($usuarios->tpo_usro){
+    case 1:
+        $tipo1 = true;
+        break;
+    case 2:
+        $tipo2 = true;
+        break;
+    case 3:
+        $tipo3 = true;
+        break;
+}
+
+?>
 <div class="row">
     <div class="col-md-4">&nbsp;</div>
     <div class="col-md-4"><h3>Editar Cuenta<h3></div>
@@ -42,6 +59,23 @@
             </div>
         </div>
         <div class="form-group">
+            <?php echo Form::label("Tipo Usuario","usuarios_tpo_usro","class='col-sm-2 control-label'"); ?>
+            <div class="col-sm-10 radio">
+                <label>
+                <?php echo Form::radio("usuarios.tpo_usro", '1', NULL, $tipo1);  ?>
+                    Administrador&nbsp;&nbsp;&nbsp;
+                </label>
+                <label>
+                <?php echo Form::radio("usuarios.tpo_usro", '2', NULL, $tipo2);  ?>
+                Gestor&nbsp;&nbsp;&nbsp;
+                </label>
+                <label>
+                <?php echo Form::radio("usuarios.tpo_usro", '3', NULL, $tipo3);  ?>
+                Residente&nbsp;&nbsp;&nbsp;
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
             <?php echo Form::label("Fono","usuarios_usro_fono","class='col-sm-2 control-label'"); ?>
             <div class="col-sm-10">
             <?php echo Form::text("usuarios.usro_fono"," class='form-control' placeholder='Fono'"); ?>
@@ -50,7 +84,6 @@
         <div class="form-group">
             <div class="col-sm-offset-4 col-sm-10">
             <?php echo Form::hidden('usuarios.usro_id') ?>
-            <?php echo Form::hidden('usuarios.tpo_usro') ?>
             <?php echo Form::submit("Update","class='btn btn-success'"); ?>
             <?php echo Form::button("Volver","class='btn btn-primary' onclick='window.history.back();'") ?>
             </div>

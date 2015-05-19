@@ -39,6 +39,19 @@ class UsuariosController extends AppController
     }
     
     public function mod_usuario($usro_id){
-        Flash::valid($usro_id);
+        $usuarios = new usuarios(); 
+        //se verifica si se ha enviado el formulario (submit)
+        if(Input::hasPost('usuarios')){            
+            if($usuarios->update(Input::post('usuarios'))){
+                 Flash::valid('Operación exitosa');
+                //enrutando por defecto al index del controller
+                return Redirect::to("usuarios/mod_usuario/".$usro_id);
+            } else {
+                Flash::error('Falló Operación');
+            }
+        } else {
+            //Aplicando la autocarga de objeto, para comenzar la edición
+            $this->usuarios = $usuarios->find_by_usro_id((int)$usro_id);
+        }
     }
 }
