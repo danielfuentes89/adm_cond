@@ -1,6 +1,4 @@
-<?php View::content(); 
-$cont = 1;
-?>
+<?php View::content(); ?>
 <div class="row">
     <div class="col-md-4">&nbsp;</div>
     <div class="col-md-4"><h3>Editar Cuenta<h3></div>
@@ -18,17 +16,14 @@ $cont = 1;
             </tr>
             <?php foreach($page->items as $p): ?>
             <tr>
-             <td><?php echo Html::link('usuarios/mod_usuario/'.$p->usro_id,$cont); ?></td>
+             <td><?php echo Html::link('usuarios/mod_usuario/'.$p->usro_id,$p->usro_id); ?></td>
              <td><?php echo $p->usro_login; ?></td>
              <td><?php echo $p->usro_nombre; ?></td>
              <td><?php echo $p->usro_apellido; ?></td>
              <td><?php echo $p->usro_correo; ?></td>
-             <td><?php 
-                $fecha = DateTime::createFromFormat('Y-m-d', $p->usro_nac);
-                echo $fecha->format('d-m-Y');  ?></td>
+             <td><?php echo $p->usro_nac; ?></td>
              <td><?php echo $p->usro_fono; ?></td>
             </tr>
-            <?php $cont++;?>
             <?php endforeach; ?>
         </table>
 

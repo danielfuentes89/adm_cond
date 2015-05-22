@@ -85,7 +85,7 @@ switch ($usuarios->tpo_usro){
             <div class="col-sm-offset-4 col-sm-10">
             <?php echo Form::hidden('usuarios.usro_id') ?>
             <?php echo Form::submit("Update","class='btn btn-success'"); ?>
-            <?php echo Html::link("usuarios/lista_usuarios","Volver","class='btn btn-primary'") ?>
+            <?php echo Form::button("Volver","class='btn btn-primary' onclick='window.history.back();'") ?>
             </div>
         </div>
     <?php echo Form::close(); ?>
