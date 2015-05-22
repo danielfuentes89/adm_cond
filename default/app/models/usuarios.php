@@ -8,7 +8,8 @@ class usuarios extends ActiveRecord{
     **/
    public function ver($page=1)
    {
-       return $this->paginate("page: $page", 'per_page: 10');
+       $sql = "select * from usuarios where usro_id !=".Session::get("id");
+       return $this->paginate_by_sql($sql);
    }
 
 }
