@@ -1,5 +1,7 @@
 <?php
-class usuarios extends ActiveRecord{
+$debug=true;
+class Usuarios extends ActiveRecord{
+    public $logger = true;
     /**
     * Muestra los usuarios de cinco en cinco utilizando paginador
     *

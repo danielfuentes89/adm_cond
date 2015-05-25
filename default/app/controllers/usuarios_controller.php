@@ -16,16 +16,20 @@ class UsuariosController extends AppController
      */
     public function micuenta($usro_id)
     {        
-        $usuarios = new usuarios(); 
+        $usuarios = new Usuarios(); 
         //se verifica si se ha enviado el formulario (submit)
-        if(Input::hasPost('usuarios')){            
-            if($usuarios->update(Input::post('usuarios'))){
-                 Flash::valid('Operación exitosa');
-                //enrutando por defecto al index del controller
-                return Redirect::to("usuarios/micuenta/".$usro_id);
-            } else {
-                Flash::error('Falló Operación');
-            }
+        if(Input::hasPost('usuarios')){ 
+            try{
+                if($usuarios->update(Input::post('usuarios'))){
+                     Flash::valid('Operación exitosa');
+                    //enrutando por defecto al index del controller
+                    return Redirect::to("usuarios/micuenta/".$usro_id);
+                } else {
+                    Flash::error('Falló Operación');
+                }
+            }catch(KumbiaException $e){
+                Flash::error("<div class='alert alert-danger col-sm-12' role='alert'>".$e->getMessage()."</div>");
+             }
         } else {
             //Aplicando la autocarga de objeto, para comenzar la edición
             $this->usuarios = $usuarios->find_by_usro_id((int)$usro_id);
@@ -39,19 +43,48 @@ class UsuariosController extends AppController
     }
     
     public function mod_usuario($usro_id){
-        $usuarios = new usuarios(); 
+        $usuarios = new Usuarios(); 
         //se verifica si se ha enviado el formulario (submit)
-        if(Input::hasPost('usuarios')){            
-            if($usuarios->update(Input::post('usuarios'))){
-                 Flash::valid('Operación exitosa');
-                //enrutando por defecto al index del controller
-                return Redirect::to("usuarios/mod_usuario/".$usro_id);
-            } else {
-                Flash::error('Falló Operación');
-            }
+        if(Input::hasPost('usuarios')){ 
+            try{
+                if($usuarios->update(Input::post('usuarios'))){
+                     Flash::valid('Operación exitosa');
+                    //enrutando por defecto al index del controller
+                    return Redirect::to("usuarios/mod_usuario/".$usro_id);
+                } else {
+                    Flash::error('Falló Operación');
+                }
+            }catch(KumbiaException $e){
+                Flash::error("<div class='alert alert-danger col-sm-12' role='alert'>".$e->getMessage()."</div>");
+             }
         } else {
             //Aplicando la autocarga de objeto, para comenzar la edición
             $this->usuarios = $usuarios->find_by_usro_id((int)$usro_id);
+        }
+    }
+    
+    public function nueva_cuenta(){
+        if(Input::hasPost('usuarios')){
+            $usuarios = new Usuarios(Input::post('usuarios'));
+            //En caso que falle la operación de guardar
+            try{               
+                if($usuarios->create()){
+                    Flash::valid('Operación exitosa');
+                    //Eliminamos el POST, si no queremos que se vean en el form
+                    Input::delete();
+                    return;               
+                }else{
+                    Flash::error('Falló Operación');
+                }
+             }catch(KumbiaException $e){
+                //Flash::error("<div class='alert alert-danger col-sm-12' role='alert'>La direccion de correo ya está registrada para otro usuario</div>");
+                    $mystring = (string)$e->getMessage();
+                    $findme   = "duplicada";
+                    $pos = strpos($mystring, $findme);
+                    if ($pos !== false) {
+                        Flash::error("<div class='alert alert-danger col-sm-12' role='alert'>La direccion de correo ya está registrada para otro usuario.</div>");
+                    }
+             }
         }
     }
 }

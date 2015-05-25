@@ -1,24 +1,7 @@
-<?php View::content(); 
-$tipo1 = false;
-$tipo2 = false;
-$tipo3 = false;
-
-switch (isset($usuarios->tpo_usro)){
-    case 1:
-        $tipo1 = true;
-        break;
-    case 2:
-        $tipo2 = true;
-        break;
-    case 3:
-        $tipo3 = true;
-        break;
-}
-
-?>
+<?php View::content(); ?>
 <div class="row">
     <div class="col-md-4">&nbsp;</div>
-    <div class="col-md-4"><h3>Editar Cuenta<h3></div>
+    <div class="col-md-4"><h3>Crear Cuenta<h3></div>
     <div class="col-md-4">&nbsp;</div>  
     <div class="col-md-12">&nbsp;</div>
     <?php echo Form::open("","POST","class= 'form-horizontal'"); ?>
@@ -62,15 +45,15 @@ switch (isset($usuarios->tpo_usro)){
             <?php echo Form::label("Tipo Usuario","usuarios_tpo_usro","class='col-sm-2 control-label'"); ?>
             <div class="col-sm-10 radio">
                 <label>
-                <?php echo Form::radio("usuarios.tpo_usro", '1', NULL, $tipo1);  ?>
+                <?php echo Form::radio("usuarios.tpo_usro", '1', NULL, NULL);  ?>
                     Administrador&nbsp;&nbsp;&nbsp;
                 </label>
                 <label>
-                <?php echo Form::radio("usuarios.tpo_usro", '2', NULL, $tipo2);  ?>
+                <?php echo Form::radio("usuarios.tpo_usro", '2', NULL, NULL);  ?>
                 Gestor&nbsp;&nbsp;&nbsp;
                 </label>
                 <label>
-                <?php echo Form::radio("usuarios.tpo_usro", '3', NULL, $tipo3);  ?>
+                <?php echo Form::radio("usuarios.tpo_usro", '3', NULL, NULL);  ?>
                 Residente&nbsp;&nbsp;&nbsp;
                 </label>
             </div>
@@ -84,8 +67,7 @@ switch (isset($usuarios->tpo_usro)){
         <div class="form-group">
             <div class="col-sm-offset-4 col-sm-10">
             <?php echo Form::hidden('usuarios.usro_id') ?>
-            <?php echo Form::submit("Update","class='btn btn-success'"); ?>
-            <?php echo Html::link("usuarios/lista_usuarios","Volver","class='btn btn-primary'") ?>
+            <?php echo Form::submit("Guardar","class='btn btn-success'"); ?>
             </div>
         </div>
     <?php echo Form::close(); ?>
