@@ -55,7 +55,12 @@ class UsuariosController extends AppController
                     Flash::error('Falló Operación');
                 }
             }catch(KumbiaException $e){
-                Flash::error("<div class='alert alert-danger col-sm-12' role='alert'>".$e->getMessage()."</div>");
+                //Flash::error("<div class='alert alert-danger col-sm-12' role='alert'>La direccion de correo ya está registrada para otro usuario</div>");
+                    $pos = strpos((string)$e->getMessage(), "duplicada");
+                    if ($pos !== false) {
+                        Flash::error("<div class='alert alert-danger col-sm-12' role='alert'>La direccion de correo ya está registrada para otro usuario.</div>");
+                    }
+                $this->usuarios = $usuarios->find_by_usro_id((int)$usro_id);
              }
         } else {
             //Aplicando la autocarga de objeto, para comenzar la edición
@@ -78,9 +83,7 @@ class UsuariosController extends AppController
                 }
              }catch(KumbiaException $e){
                 //Flash::error("<div class='alert alert-danger col-sm-12' role='alert'>La direccion de correo ya está registrada para otro usuario</div>");
-                    $mystring = (string)$e->getMessage();
-                    $findme   = "duplicada";
-                    $pos = strpos($mystring, $findme);
+                    $pos = strpos((string)$e->getMessage(), "duplicada");
                     if ($pos !== false) {
                         Flash::error("<div class='alert alert-danger col-sm-12' role='alert'>La direccion de correo ya está registrada para otro usuario.</div>");
                     }
