@@ -1,0 +1,283 @@
+[Mon, 25 May 15 12:07:45 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:08:00 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:08:08 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:08:13 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:08:13 -0400][DEBUG] SELECT COUNT(*) FROM usuarios  WHERE usro_correo = 'danielfuentes89@gmail.com' AND usro_pass = '1234'
+[Mon, 25 May 15 12:08:13 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:08:17 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:08:17 -0400][DEBUG] SELECT COUNT(*) FROM usuarios  WHERE usro_correo = 'danielfuentes89@gmail.com' AND usro_pass = '12345'
+[Mon, 25 May 15 12:08:17 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_correo = 'danielfuentes89@gmail.com' AND usro_pass = '12345' LIMIT 1
+[Mon, 25 May 15 12:08:17 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_correo='danielfuentes89@gmail.com' LIMIT 1
+[Mon, 25 May 15 12:08:21 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:08:23 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:08:23 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:08:23 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:08:26 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:15 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:15 -0400][DEBUG] INSERT INTO usuarios (usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono) VALUES ('Amesa','1234','Andres','Mesa','andres.mesa@correo.cl','1992-08-26 0:00:00','2','+56228945235')
+[Mon, 25 May 15 12:09:15 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = 5 LIMIT 1
+[Mon, 25 May 15 12:09:18 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:18 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:09:18 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:09:20 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:20 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '5' LIMIT 1
+[Mon, 25 May 15 12:09:28 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:28 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:09:28 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:09:30 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:30 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:09:32 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:32 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:09:32 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:09:33 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:33 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '3' LIMIT 1
+[Mon, 25 May 15 12:09:35 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:35 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:09:35 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:09:37 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:37 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '5' LIMIT 1
+[Mon, 25 May 15 12:09:39 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:39 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '5'
+[Mon, 25 May 15 12:09:39 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '5'
+[Mon, 25 May 15 12:09:39 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Amesa',usro_pass = '1234',usro_nombre = 'Andres',usro_apellido = 'Mesa',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1992-08-26',tpo_usro = '3',usro_fono = '+56228945235' WHERE  usro_id = '5'
+[Mon, 25 May 15 12:09:39 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:39 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '5' LIMIT 1
+[Mon, 25 May 15 12:09:40 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:40 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:09:40 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:09:42 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:42 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '5' LIMIT 1
+[Mon, 25 May 15 12:09:43 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:44 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:09:44 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:09:47 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:47 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:09:48 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:48 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:09:48 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:09:49 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:49 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '3' LIMIT 1
+[Mon, 25 May 15 12:09:50 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:09:50 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:09:50 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:10:37 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:10:37 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:12:21 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:12:21 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:12:25 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:12:25 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:12:25 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:12:25 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'JuanPerez@correo.com',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:12:25 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:12:25 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:12:28 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:12:28 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:12:28 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:12:30 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:12:30 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:13:06 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:06 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:06 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:06 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'JuanPerez@correo.com',usro_nac = '1989-11-02',tpo_usro = '2',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:06 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:06 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:13:07 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:07 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:13:07 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:13:09 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:09 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:13:12 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:12 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:12 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:12 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'JuanPerez@correo.com',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:12 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:12 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:13:13 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:13 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:13:13 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:13:14 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:14 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:13:21 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:21 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:21 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:21 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:21 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:21 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:13:35 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:35 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:13:35 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:13:37 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:37 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:13:46 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:46 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:46 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:46 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'JuanPerez@correo.com',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:13:46 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:46 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:13:48 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:13:48 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:13:48 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:14:20 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:14:20 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:14:25 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:14:25 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:14:25 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:14:25 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:14:25 -0400][ERROR] Duplicata du champ 'andres.mesa@correo.cl' pour la clef 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:15:23 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:15:23 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:15:23 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:15:23 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:15:23 -0400][ERROR] Duplicata du champ 'andres.mesa@correo.cl' pour la clef 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:20:09 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:20:09 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:20:09 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:20:09 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:20:09 -0400][ERROR] Duplicata du champ 'andres.mesa@correo.cl' pour la clef 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:20:13 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:20:13 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:20:13 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:20:14 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:20:14 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:20:47 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:20:47 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:21:01 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:21:01 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:21:01 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:21:01 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '1',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:21:01 -0400][ERROR] Duplicata du champ 'andres.mesa@correo.cl' pour la clef 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '1',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:21:28 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:21:28 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:21:28 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:21:28 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '1',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:21:29 -0400][ERROR] Duplicata du champ 'andres.mesa@correo.cl' pour la clef 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '1',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:21:29 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:21:31 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:21:31 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:21:31 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:21:41 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:21:41 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:21:41 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:21:41 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:21:41 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:21:42 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:21:43 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:21:43 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:21:48 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:21:48 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:21:48 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:21:48 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:21:48 -0400][ERROR] Duplicata du champ 'andres.mesa@correo.cl' pour la clef 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:21:48 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:29:36 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:29:37 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:29:44 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:29:44 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:29:44 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:29:44 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:29:44 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:29:45 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:30:09 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:30:14 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:30:14 -0400][DEBUG] SELECT COUNT(*) FROM usuarios  WHERE usro_correo = 'danielfuentes89@gmail.com' AND usro_pass = '1234'
+[Mon, 25 May 15 12:30:14 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:30:18 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:30:18 -0400][DEBUG] SELECT COUNT(*) FROM usuarios  WHERE usro_correo = 'danielfuentes89@gmail.com' AND usro_pass = '12345'
+[Mon, 25 May 15 12:30:18 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_correo = 'danielfuentes89@gmail.com' AND usro_pass = '12345' LIMIT 1
+[Mon, 25 May 15 12:30:18 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_correo='danielfuentes89@gmail.com' LIMIT 1
+[Mon, 25 May 15 12:30:21 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:30:21 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:30:21 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:30:22 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:30:22 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:30:28 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:30:28 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:30:28 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:30:28 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:30:29 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:30:29 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:30:58 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:30:58 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:30:58 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:30:58 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:30:58 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:30:58 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:31:21 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:31:21 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:31:21 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:31:21 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:31:21 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:31:21 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:31:28 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:31:28 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:31:28 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:31:28 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:31:28 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:31:28 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:31:33 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:31:33 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:31:33 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:31:33 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:31:33 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:31:33 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:32:09 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:32:09 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:32:09 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:32:09 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:32:09 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:32:09 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:32:33 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:32:33 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:32:33 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:32:33 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:32:33 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:32:33 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:33:12 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:42:24 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:42:24 -0400][DEBUG] SELECT COUNT(*) FROM usuarios  WHERE usro_correo = 'danielfuentes89@gmail.com' AND usro_pass = '12345'
+[Mon, 25 May 15 12:42:24 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_correo = 'danielfuentes89@gmail.com' AND usro_pass = '12345' LIMIT 1
+[Mon, 25 May 15 12:42:24 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_correo='danielfuentes89@gmail.com' LIMIT 1
+[Mon, 25 May 15 12:42:29 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:42:59 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:42:59 -0400][DEBUG] INSERT INTO usuarios (usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono) VALUES ('Amesa','1234','Andres','Mesa','andres.mesa@correo.cl','1993-06-29 0:00:00','3','+5622683549')
+[Mon, 25 May 15 12:43:00 -0400][ERROR] Entrada duplicada 'Amesa' para la clave 'usro_login' al ejecutar <em>"INSERT INTO usuarios (usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono) VALUES ('Amesa','1234','Andres','Mesa','andres.mesa@correo.cl','1993-06-29 0:00:00','3','+5622683549')"</em>
+[Mon, 25 May 15 12:43:13 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:43:13 -0400][DEBUG] SELECT COUNT(*) FROM (select * from usuarios where usro_id !=1) AS t
+[Mon, 25 May 15 12:43:13 -0400][DEBUG] select * from usuarios where usro_id !=1 LIMIT 10 OFFSET 0
+[Mon, 25 May 15 12:43:15 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:43:15 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:43:19 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:43:19 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:19 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:19 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:19 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:43:19 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:43:32 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:43:32 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:32 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:32 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:32 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:43:39 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:43:39 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:39 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:39 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:39 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:43:39 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:43:40 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:43:40 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:40 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:40 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:40 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:43:40 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:43:41 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:43:41 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:41 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:41 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:41 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:43:41 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
+[Mon, 25 May 15 12:43:43 -0400][DEBUG] DESCRIBE `usuarios`
+[Mon, 25 May 15 12:43:43 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:43 -0400][DEBUG] SELECT COUNT(*) FROM usuarios WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:43 -0400][DEBUG] UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'
+[Mon, 25 May 15 12:43:43 -0400][ERROR] Entrada duplicada 'andres.mesa@correo.cl' para la clave 'usro_correo' al ejecutar <em>"UPDATE usuarios SET usro_login = 'Jperez',usro_pass = '1234',usro_nombre = 'Juan',usro_apellido = 'Perez',usro_correo = 'andres.mesa@correo.cl',usro_nac = '1989-11-02',tpo_usro = '3',usro_fono = '+56226835439' WHERE  usro_id = '4'"</em>
+[Mon, 25 May 15 12:43:43 -0400][DEBUG] SELECT usro_id,usro_login,usro_pass,usro_nombre,usro_apellido,usro_correo,usro_nac,tpo_usro,usro_fono FROM usuarios WHERE usro_id = '4' LIMIT 1
